@@ -1,0 +1,18 @@
+
+Log Entry : 17:11 11/09/2015
+
+System.Net.Mail.SmtpException: Échec d'envoi du courrier. ---> System.IO.IOException: Impossible d'écrire les données sur la connexion de transport : Une connexion existante a dû être fermée par l’hôte distant. ---> System.Net.Sockets.SocketException: Une connexion existante a dû être fermée par l’hôte distant
+   à System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   --- Fin de la trace de la pile d'exception interne ---
+   à System.Net.Sockets.NetworkStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   à System.Net.Security._SslStream.StartWriting(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   à System.Net.Security._SslStream.ProcessWrite(Byte[] buffer, Int32 offset, Int32 count, AsyncProtocolRequest asyncRequest)
+   à System.Net.TlsStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   à System.Net.Mail.SmtpConnection.Flush()
+   à System.Net.Mail.CheckCommand.Send(SmtpConnection conn, String& response)
+   à System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   à System.Net.Mail.SmtpClient.Send(MailMessage message)
+   --- Fin de la trace de la pile d'exception interne ---
+   à System.Net.Mail.SmtpClient.Send(MailMessage message)
+   à FwameworkChangesReporter.MailSender.SendMail(List`1 invalidCommitsCommitById, PushEventProperties commit) dans e:\SVNNetProjects\FWA\Petits projets\FwameworkChangesReporter\FwameworkChangesReporter\FwameworkChangesReporter\FwameworkChangesReporter\MailSender.cs:ligne 26
+-------------------------------
